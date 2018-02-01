@@ -43,3 +43,9 @@ set relativenumber
 set showcmd
 set backspace=indent,eol,start
 
+" =====================
+"  Tabs & Indentation
+" =====================
+set tabstop=2
+set shiftwidth=2
+set expandtab
