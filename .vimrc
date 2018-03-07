@@ -1,11 +1,20 @@
 " Setup Plugins
 call plug#begin('~/.vim/plugged')
 
+" Search
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'rking/ag.vim'
+
+" Edit
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-surround'
-Plug 'flazz/vim-colorschemes'
-Plug 'rking/ag.vim'
+
+" Colorschemes
+Plug 'ajmwagar/vim-deus'
+
+" JavaScript, ReactJS
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 
 call plug#end()
 
@@ -17,6 +26,9 @@ call plug#end()
 if executable('rg')
   let g:ag_prg = "rg --vimgrep -L -a"
 endif
+
+" supertab
+let g:SuperTabCrMapping = 1
 
 " =====================
 "  Custom Key Mappings
@@ -34,10 +46,15 @@ nnoremap <Down>  :echo "y u no `j`?"<cr>
 nnoremap <Left>  :echo "y u no `h`?"<cr>
 nnoremap <Right> :echo "y u no `l`?"<cr>
 
+" Fast switch to normal mode
+inoremap jj <Esc>
+inoremap jk <Esc>
+
 " =====================
 "       Misc Stuff
 " =====================
-colorscheme minimalist
+colorscheme deus
+" colorscheme minimalist
 
 set relativenumber
 set showcmd
